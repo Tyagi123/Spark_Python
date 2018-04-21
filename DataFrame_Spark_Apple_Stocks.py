@@ -6,7 +6,7 @@ data = spark.read.csv("./Data/HistoricalQuotes.csv", inferSchema=True, header=Tr
 
 data.printSchema()
 
-'''data.show()'''
+data.show()
 
 print(data.head(3))
 
