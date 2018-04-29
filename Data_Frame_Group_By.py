@@ -8,3 +8,8 @@ data.printSchema()
 data.show()
 
 data.groupBy("Sector").count().show()
+
+'''PYSPARK function to count distinct'''
+from pyspark.sql.functions import countDistinct
+
+data.select(countDistinct("Sector")).show()
