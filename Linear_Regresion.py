@@ -60,3 +60,11 @@ print(test_result.rootMeanSquaredError)
 
 '''root error'''
 print(test_result.r2)
+
+'''Mean absolute error'''
+print(test_result.meanAbsoluteError)
+
+''' Check Corrlation ship between 2 fields '''
+from pyspark.sql.functions import corr
+
+print(data.select(corr('Bathrooms', 'Price')).show())
